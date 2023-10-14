@@ -1,6 +1,6 @@
 /* GroupCard.module.css */
 
-.group-card {
+.org-card {
   border: 1px solid #ccc;
   padding: 20px;
   margin: 5px;
@@ -15,11 +15,11 @@
   text-align: center; 
 }
 
-.group-card:hover {
+.org-card:hover {
   transform: translateY(-5px);
 }
 
-.group-logo {
+.org-logo {
   width: 100px;
   height: 100px;
   object-fit: contain;
@@ -30,14 +30,14 @@
 }
 
 /* Optional: You can add this to ensure the content is centered vertically */
-.group-card-content {
+.org-card-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.groupscontainer {
+.orgscontainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

@@ -1,27 +1,22 @@
 // /context/MyVariableContext.tsx
 import React, { createContext, useState, useContext, ReactNode } from 'react';
 
-interface Project {
-  project_id: string;
-  project_name: string;
-  project_type: string;
-  wallet: string;
+interface Repo {
+  repo_id: string;
+  repo_name: string;
+  repo_type: string;
 }
 
-interface Group {
-  group_id: string;
-  group_name: string;
+interface Org {
+  org_id: string;
+  org_name: string;
   logo_url: string;
-  projects: Project[];
+  repos: Repo[];
 }
 
 type MyVariable = {
-  groupInfo: Group[];
-  projectInfo?: any;
-  budgetInfo?: any;
-  transactions?: any;
-  report?: any;
-  balance?: any;
+  orgInfo: Org[];
+  repoInfo?: any;
   // other keys go here
 };
 
@@ -37,7 +32,7 @@ interface MyVariableProviderProps {
 }
 
 export const MyVariableProvider: React.FC<MyVariableProviderProps> = ({ children }) => {
-  const [myVariable, setMyVariable] = useState<MyVariable>({ groupInfo: [], projectInfo: undefined, budgetInfo: undefined, transactions: undefined, report: undefined, balance: undefined });
+  const [myVariable, setMyVariable] = useState<MyVariable>({ orgInfo: [], repoInfo: undefined });
 
   return (
     <MyVariableContext.Provider value={{ myVariable, setMyVariable }}>
